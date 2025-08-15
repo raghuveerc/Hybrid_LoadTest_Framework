@@ -1,0 +1,377 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< com.example:gatling-java >----------------------
+[INFO] Building Hybrid Gatling Protocol Load 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> gatling:4.9.6:test (default-cli) > test-compile @ gatling-java >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ gatling-java ---
+[INFO] skip non existing resourceDirectory /Users/raghuveerchintoju/hybrid-load-framework/gatling-java/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ gatling-java ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ gatling-java ---
+[INFO] Copying 1 resource from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ gatling-java ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] <<< gatling:4.9.6:test (default-cli) < test-compile @ gatling-java <<<
+[INFO] 
+[INFO] 
+[INFO] --- gatling:4.9.6:test (default-cli) @ gatling-java ---
+[INFO] Running simulation com.example.BrowserProtocolSimulation.
+17:37:23,902 |-INFO in ch.qos.logback.classic.LoggerContext[default] - This is logback-classic version 1.5.15
+17:37:23,903 |-INFO in ch.qos.logback.classic.util.ContextInitializer@223f3642 - No custom configurators were discovered as a service.
+17:37:23,903 |-INFO in ch.qos.logback.classic.util.ContextInitializer@223f3642 - Trying to configure with ch.qos.logback.classic.joran.SerializedModelConfigurator
+17:37:23,904 |-INFO in ch.qos.logback.classic.util.ContextInitializer@223f3642 - Constructed configurator of type class ch.qos.logback.classic.joran.SerializedModelConfigurator
+17:37:23,907 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.scmo]
+17:37:23,907 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.scmo]
+17:37:23,913 |-INFO in ch.qos.logback.classic.util.ContextInitializer@223f3642 - ch.qos.logback.classic.joran.SerializedModelConfigurator.configure() call lasted 3 milliseconds. ExecutionStatus=INVOKE_NEXT_IF_ANY
+17:37:23,913 |-INFO in ch.qos.logback.classic.util.ContextInitializer@223f3642 - Trying to configure with ch.qos.logback.classic.util.DefaultJoranConfigurator
+17:37:23,916 |-INFO in ch.qos.logback.classic.util.ContextInitializer@223f3642 - Constructed configurator of type class ch.qos.logback.classic.util.DefaultJoranConfigurator
+17:37:23,917 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+17:37:23,920 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [jar:file:/Users/raghuveerchintoju/.m2/repository/io/gatling/gatling-maven-plugin/4.9.6/gatling-maven-plugin-4.9.6.jar!/logback.xml]
+17:37:23,930 |-INFO in ConfigurationWatchList(mainURL=jar:file:/Users/raghuveerchintoju/.m2/repository/io/gatling/gatling-maven-plugin/4.9.6/gatling-maven-plugin-4.9.6.jar!/logback.xml, fileWatchList={}, urlWatchList=[}) - URL [jar:file:/Users/raghuveerchintoju/.m2/repository/io/gatling/gatling-maven-plugin/4.9.6/gatling-maven-plugin-4.9.6.jar!/logback.xml] is not of type file
+17:37:23,993 |-WARN in ch.qos.logback.classic.joran.action.LevelAction - <level> element is deprecated. Near [level] on line 12
+17:37:23,993 |-WARN in ch.qos.logback.classic.joran.action.LevelAction - Please use "level" attribute within <logger> or <root> elements instead.
+17:37:24,026 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [CONSOLE]
+17:37:24,026 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+17:37:24,030 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+17:37:24,057 |-INFO in ch.qos.logback.core.ConsoleAppender[CONSOLE] - BEWARE: Writing to the console can be very slow. Avoid logging to the 
+17:37:24,057 |-INFO in ch.qos.logback.core.ConsoleAppender[CONSOLE] - console in production environments, especially in high volume systems.
+17:37:24,057 |-INFO in ch.qos.logback.core.ConsoleAppender[CONSOLE] - See also https://logback.qos.ch/codes.html#slowConsole
+17:37:24,058 |-INFO in ch.qos.logback.classic.model.processor.LevelModelHandler - ROOT level set to WARN
+17:37:24,058 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [CONSOLE] to Logger[ROOT]
+17:37:24,058 |-INFO in ch.qos.logback.core.model.processor.DefaultProcessor@78e94dcf - End of configuration.
+17:37:24,059 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@233fe9b6 - Registering current configuration as safe fallback point
+17:37:24,059 |-INFO in ch.qos.logback.classic.util.ContextInitializer@223f3642 - ch.qos.logback.classic.util.DefaultJoranConfigurator.configure() call lasted 144 milliseconds. ExecutionStatus=DO_NOT_INVOKE_NEXT_IF_ANY
+
+SLF4J(I): Connected with provider of type [ch.qos.logback.classic.spi.LogbackServiceProvider]
+Simulation com.example.BrowserProtocolSimulation started...
+
+========================================================================================================================
+2025-08-15 07:37:33 GMT                                                                               5s elapsed
+---- Requests -----------------------------------------------------------------------|---Total---|-----OK----|----KO----
+> Global                                                                             |         4 |         4 |         0
+> GET_home                                                                           |         4 |         4 |         0
+
+---- Protocol-Load -----------------------------------------------------------------------------------------------------
+[###||                                                                                                           ] 3.33%
+          waiting:        86 / active:         1  / done:         3
+========================================================================================================================
+
+
+========================================================================================================================
+2025-08-15 07:37:38 GMT                                                                              10s elapsed
+---- Requests -----------------------------------------------------------------------|---Total---|-----OK----|----KO----
+> Global                                                                             |         8 |         8 |         0
+> GET_home                                                                           |         8 |         8 |         0
+
+---- Protocol-Load -----------------------------------------------------------------------------------------------------
+[########||                                                                                                      ] 7.78%
+          waiting:        82 / active:         1  / done:         7
+========================================================================================================================
+
+
+========================================================================================================================
+2025-08-15 07:37:43 GMT                                                                              15s elapsed
+---- Requests -----------------------------------------------------------------------|---Total---|-----OK----|----KO----
+> Global                                                                             |        12 |        12 |         0
+> GET_home                                                                           |        12 |        12 |         0
+
+---- Protocol-Load -----------------------------------------------------------------------------------------------------
+[#############||                                                                                                 ]12.22%
+          waiting:        78 / active:         1  / done:        11
+========================================================================================================================
+
+
+========================================================================================================================
+2025-08-15 07:37:48 GMT                                                                              20s elapsed
+---- Requests -----------------------------------------------------------------------|---Total---|-----OK----|----KO----
+> Global                                                                             |        15 |        15 |         0
+> GET_home                                                                           |        15 |        15 |         0
+
+---- Protocol-Load -----------------------------------------------------------------------------------------------------
+[##################                                                                                              ]16.67%
+          waiting:        75 / active:         0  / done:        15
+========================================================================================================================
+
+
+========================================================================================================================
+2025-08-15 07:37:53 GMT                                                                              25s elapsed
+---- Requests -----------------------------------------------------------------------|---Total---|-----OK----|----KO----
+> Global                                                                             |        19 |        19 |         0
+> GET_home                                                                           |        19 |        19 |         0
+
+---- Protocol-Load -----------------------------------------------------------------------------------------------------
+[######################||                                                                                        ]   20%
+          waiting:        71 / active:         1  / done:        18
+========================================================================================================================
+
+
+========================================================================================================================
+2025-08-15 07:37:58 GMT                                                                              30s elapsed
+---- Requests -----------------------------------------------------------------------|---Total---|-----OK----|----KO----
+> Global                                                                             |        23 |        23 |         0
+> GET_home                                                                           |        23 |        23 |         0
+
+---- Protocol-Load -----------------------------------------------------------------------------------------------------
+[###########################||                                                                                   ]24.44%
+          waiting:        67 / active:         1  / done:        22
+========================================================================================================================
+
+
+========================================================================================================================
+2025-08-15 07:38:03 GMT                                                                              35s elapsed
+---- Requests -----------------------------------------------------------------------|---Total---|-----OK----|----KO----
+> Global                                                                             |        27 |        27 |         0
+> GET_home                                                                           |        27 |        27 |         0
+
+---- Protocol-Load -----------------------------------------------------------------------------------------------------
+[################################||                                                                              ]28.89%
+          waiting:        63 / active:         1  / done:        26
+========================================================================================================================
+
+
+========================================================================================================================
+2025-08-15 07:38:08 GMT                                                                              40s elapsed
+---- Requests -----------------------------------------------------------------------|---Total---|-----OK----|----KO----
+> Global                                                                             |        30 |        30 |         0
+> GET_home                                                                           |        30 |        30 |         0
+
+---- Protocol-Load -----------------------------------------------------------------------------------------------------
+[#####################################                                                                           ]33.33%
+          waiting:        60 / active:         0  / done:        30
+========================================================================================================================
+
+
+========================================================================================================================
+2025-08-15 07:38:13 GMT                                                                              45s elapsed
+---- Requests -----------------------------------------------------------------------|---Total---|-----OK----|----KO----
+> Global                                                                             |        34 |        34 |         0
+> GET_home                                                                           |        34 |        34 |         0
+
+---- Protocol-Load -----------------------------------------------------------------------------------------------------
+[#########################################||                                                                     ]36.67%
+          waiting:        56 / active:         1  / done:        33
+========================================================================================================================
+
+
+========================================================================================================================
+2025-08-15 07:38:18 GMT                                                                              50s elapsed
+---- Requests -----------------------------------------------------------------------|---Total---|-----OK----|----KO----
+> Global                                                                             |        38 |        38 |         0
+> GET_home                                                                           |        38 |        38 |         0
+
+---- Protocol-Load -----------------------------------------------------------------------------------------------------
+[##############################################||                                                                ]41.11%
+          waiting:        52 / active:         1  / done:        37
+========================================================================================================================
+
+
+========================================================================================================================
+2025-08-15 07:38:23 GMT                                                                              55s elapsed
+---- Requests -----------------------------------------------------------------------|---Total---|-----OK----|----KO----
+> Global                                                                             |        42 |        42 |         0
+> GET_home                                                                           |        42 |        42 |         0
+
+---- Protocol-Load -----------------------------------------------------------------------------------------------------
+[###################################################||                                                           ]45.56%
+          waiting:        48 / active:         1  / done:        41
+========================================================================================================================
+
+
+========================================================================================================================
+2025-08-15 07:38:28 GMT                                                                              60s elapsed
+---- Requests -----------------------------------------------------------------------|---Total---|-----OK----|----KO----
+> Global                                                                             |        45 |        45 |         0
+> GET_home                                                                           |        45 |        45 |         0
+
+---- Protocol-Load -----------------------------------------------------------------------------------------------------
+[########################################################                                                        ]   50%
+          waiting:        45 / active:         0  / done:        45
+========================================================================================================================
+
+
+========================================================================================================================
+2025-08-15 07:38:33 GMT                                                                              65s elapsed
+---- Requests -----------------------------------------------------------------------|---Total---|-----OK----|----KO----
+> Global                                                                             |        49 |        49 |         0
+> GET_home                                                                           |        49 |        49 |         0
+
+---- Protocol-Load -----------------------------------------------------------------------------------------------------
+[###########################################################||                                                   ]53.33%
+          waiting:        41 / active:         1  / done:        48
+========================================================================================================================
+
+
+========================================================================================================================
+2025-08-15 07:38:38 GMT                                                                              70s elapsed
+---- Requests -----------------------------------------------------------------------|---Total---|-----OK----|----KO----
+> Global                                                                             |        53 |        53 |         0
+> GET_home                                                                           |        53 |        53 |         0
+
+---- Protocol-Load -----------------------------------------------------------------------------------------------------
+[################################################################||                                              ]57.78%
+          waiting:        37 / active:         1  / done:        52
+========================================================================================================================
+
+
+========================================================================================================================
+2025-08-15 07:38:43 GMT                                                                              75s elapsed
+---- Requests -----------------------------------------------------------------------|---Total---|-----OK----|----KO----
+> Global                                                                             |        57 |        57 |         0
+> GET_home                                                                           |        57 |        57 |         0
+
+---- Protocol-Load -----------------------------------------------------------------------------------------------------
+[#####################################################################||                                         ]62.22%
+          waiting:        33 / active:         1  / done:        56
+========================================================================================================================
+
+
+========================================================================================================================
+2025-08-15 07:38:48 GMT                                                                              80s elapsed
+---- Requests -----------------------------------------------------------------------|---Total---|-----OK----|----KO----
+> Global                                                                             |        60 |        60 |         0
+> GET_home                                                                           |        60 |        60 |         0
+
+---- Protocol-Load -----------------------------------------------------------------------------------------------------
+[##########################################################################                                      ]66.67%
+          waiting:        30 / active:         0  / done:        60
+========================================================================================================================
+
+
+========================================================================================================================
+2025-08-15 07:38:53 GMT                                                                              85s elapsed
+---- Requests -----------------------------------------------------------------------|---Total---|-----OK----|----KO----
+> Global                                                                             |        64 |        64 |         0
+> GET_home                                                                           |        64 |        64 |         0
+
+---- Protocol-Load -----------------------------------------------------------------------------------------------------
+[##############################################################################||                                ]   70%
+          waiting:        26 / active:         1  / done:        63
+========================================================================================================================
+
+
+========================================================================================================================
+2025-08-15 07:38:58 GMT                                                                              90s elapsed
+---- Requests -----------------------------------------------------------------------|---Total---|-----OK----|----KO----
+> Global                                                                             |        68 |        68 |         0
+> GET_home                                                                           |        68 |        68 |         0
+
+---- Protocol-Load -----------------------------------------------------------------------------------------------------
+[###################################################################################||                           ]74.44%
+          waiting:        22 / active:         1  / done:        67
+========================================================================================================================
+
+
+========================================================================================================================
+2025-08-15 07:39:03 GMT                                                                              95s elapsed
+---- Requests -----------------------------------------------------------------------|---Total---|-----OK----|----KO----
+> Global                                                                             |        72 |        72 |         0
+> GET_home                                                                           |        72 |        72 |         0
+
+---- Protocol-Load -----------------------------------------------------------------------------------------------------
+[########################################################################################||                      ]78.89%
+          waiting:        18 / active:         1  / done:        71
+========================================================================================================================
+
+
+========================================================================================================================
+2025-08-15 07:39:08 GMT                                                                             100s elapsed
+---- Requests -----------------------------------------------------------------------|---Total---|-----OK----|----KO----
+> Global                                                                             |        75 |        75 |         0
+> GET_home                                                                           |        75 |        75 |         0
+
+---- Protocol-Load -----------------------------------------------------------------------------------------------------
+[#############################################################################################                   ]83.33%
+          waiting:        15 / active:         0  / done:        75
+========================================================================================================================
+
+
+========================================================================================================================
+2025-08-15 07:39:13 GMT                                                                             105s elapsed
+---- Requests -----------------------------------------------------------------------|---Total---|-----OK----|----KO----
+> Global                                                                             |        79 |        79 |         0
+> GET_home                                                                           |        79 |        79 |         0
+
+---- Protocol-Load -----------------------------------------------------------------------------------------------------
+[#################################################################################################||             ]86.67%
+          waiting:        11 / active:         1  / done:        78
+========================================================================================================================
+
+
+========================================================================================================================
+2025-08-15 07:39:18 GMT                                                                             110s elapsed
+---- Requests -----------------------------------------------------------------------|---Total---|-----OK----|----KO----
+> Global                                                                             |        83 |        83 |         0
+> GET_home                                                                           |        83 |        83 |         0
+
+---- Protocol-Load -----------------------------------------------------------------------------------------------------
+[######################################################################################################||        ]91.11%
+          waiting:         7 / active:         1  / done:        82
+========================================================================================================================
+
+
+========================================================================================================================
+2025-08-15 07:39:23 GMT                                                                             115s elapsed
+---- Requests -----------------------------------------------------------------------|---Total---|-----OK----|----KO----
+> Global                                                                             |        87 |        87 |         0
+> GET_home                                                                           |        87 |        87 |         0
+
+---- Protocol-Load -----------------------------------------------------------------------------------------------------
+[###########################################################################################################||   ]95.56%
+          waiting:         3 / active:         1  / done:        86
+========================================================================================================================
+
+
+========================================================================================================================
+2025-08-15 07:39:28 GMT                                                                             119s elapsed
+---- Requests -----------------------------------------------------------------------|---Total---|-----OK----|----KO----
+> Global                                                                             |        90 |        90 |         0
+> GET_home                                                                           |        90 |        90 |         0
+
+---- Protocol-Load -----------------------------------------------------------------------------------------------------
+[################################################################################################################]  100%
+          waiting:         0 / active:         0  / done:        90
+========================================================================================================================
+
+Parsing log file(s)...
+Parsing log file(s) done in 0s.
+Generating reports...
+java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at io.gatling.plugin.util.ForkMain.runMain(ForkMain.java:67)
+	at io.gatling.plugin.util.ForkMain.main(ForkMain.java:35)
+Caused by: java.lang.ExceptionInInitializerError
+	at io.gatling.charts.report.ReportsGenerator.generateFor(ReportsGenerator.scala:55)
+	at io.gatling.app.RunResultProcessor.generateReports(RunResultProcessor.scala:67)
+	at io.gatling.app.RunResultProcessor.processRunResult(RunResultProcessor.scala:38)
+	at io.gatling.app.Gatling$.start(Gatling.scala:93)
+	at io.gatling.app.Gatling$.fromArgs(Gatling.scala:46)
+	at io.gatling.app.Gatling$.main(Gatling.scala:40)
+	at io.gatling.app.Gatling.main(Gatling.scala)
+	... 6 more
+Caused by: java.lang.IllegalStateException: Couldn't find a ComponentLibrary implementation
+	at io.gatling.charts.component.ComponentLibrary$.<clinit>(ComponentLibrary.scala:30)
+	... 13 more
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  02:05 min
+[INFO] Finished at: 2025-08-15T17:39:28+10:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal io.gatling:gatling-maven-plugin:4.9.6:test (default-cli) on project gatling-java: Gatling failed.: ForkException -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException

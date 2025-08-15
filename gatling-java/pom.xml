@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.example</groupId>
+  <artifactId>gatling-java</artifactId>
+  <version>1.0.0</version>
+  <name>Hybrid Gatling Protocol Load</name>
+  <properties>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <gatling.version>3.13.5</gatling.version>
+    <gatling-maven-plugin.version>4.9.6</gatling-maven-plugin.version>
+    <gatling.skip>false</gatling.skip>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>io.gatling</groupId>
+      <artifactId>gatling-core</artifactId>
+      <version>${gatling.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.gatling</groupId>
+      <artifactId>gatling-http</artifactId>
+      <version>${gatling.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>1.5.15</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.gatling</groupId>
+      <artifactId>gatling-app</artifactId>
+      <version>${gatling.version}</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>io.gatling</groupId>
+      <artifactId>gatling-core-java</artifactId>
+      <version>${gatling.version}</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>io.gatling</groupId>
+      <artifactId>gatling-http-java</artifactId>
+      <version>${gatling.version}</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>io.gatling</groupId>
+      <artifactId>gatling-charts</artifactId>
+      <version>${gatling.version}</version>
+      <scope>test</scope>
+    </dependency>
+
+
+
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.13.0</version>
+        <configuration>
+          <source>17</source>
+          <target>17</target>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>io.gatling</groupId>
+        <artifactId>gatling-maven-plugin</artifactId>
+        <version>${gatling-maven-plugin.version}</version>
+        <configuration>
+          <resultsFolder>target/gatling/results</resultsFolder>
+          <includes>
+            <include>**/*.java</include> <!-- Gatling will look in src/test/java by default -->
+          </includes>
+          <skip>false</skip>
+          <runMultipleSimulations>false</runMultipleSimulations>
+          <simulationClass>com.example.BrowserProtocolSimulation</simulationClass>
+          <jvmArgs>
+            <jvmArg>--add-opens=java.base/java.lang=ALL-UNNAMED</jvmArg>
+            <jvmArg>--add-opens=java.base/java.lang.invoke=ALL-UNNAMED</jvmArg>
+            <jvmArg>--add-opens=java.base/java.lang.reflect=ALL-UNNAMED</jvmArg>
+            <jvmArg>--add-opens=java.base/java.io=ALL-UNNAMED</jvmArg>
+            <jvmArg>--add-opens=java.base/java.net=ALL-UNNAMED</jvmArg>
+            <jvmArg>--add-opens=java.base/java.util=ALL-UNNAMED</jvmArg>
+            <jvmArg>--add-opens=java.base/java.util.concurrent=ALL-UNNAMED</jvmArg>
+            <jvmArg>--add-opens=java.base/sun.nio.ch=ALL-UNNAMED</jvmArg>
+            <jvmArg>--add-opens=java.base/sun.nio.cs=ALL-UNNAMED</jvmArg>
+            <jvmArg>--add-opens=java.base/sun.security.action=ALL-UNNAMED</jvmArg>
+            <jvmArg>--add-opens=java.base/sun.util.calendar=ALL-UNNAMED</jvmArg>
+            <jvmArg>--add-opens=java.base/java.text=ALL-UNNAMED</jvmArg>
+            <jvmArg>--add-opens=java.base/java.time=ALL-UNNAMED</jvmArg>
+            <jvmArg>--add-opens=java.base/java.time.chrono=ALL-UNNAMED</jvmArg>
+            <jvmArg>--add-opens=java.base/java.time.format=ALL-UNNAMED</jvmArg>
+            <jvmArg>--add-opens=java.base/java.time.temporal=ALL-UNNAMED</jvmArg>
+            <jvmArg>--add-opens=java.base/java.time.zone=ALL-UNNAMED</jvmArg>
+          </jvmArgs>
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>test</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>
