@@ -39,7 +39,7 @@ It enables teams to see both **end-user experience metrics** and **server perfor
 
 ### 1. Run Browser (UI) Test
 ```bash
-VUS=5 ITERATIONS=10 k6 run browser-quickpizza.test.js
+VUS=5 ITERATIONS=10 k6 run browser-ui-simulation.test.js
 ```
 
 ### 2. Run Gatling (Protocol) Test
